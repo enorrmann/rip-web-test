@@ -1,0 +1,23 @@
+<div><input type="text" placeholder="nro organismo "></input></div>
+<div>
+	<select ></select>
+	 <select id="cargo" ng-model="usuario.cargo" ng-options="cargo.nombre for cargo in listaCargos">
+     </select>
+</div>
+<div>
+	 <select id="anio" ng-model="anio" ng-options="anio.nro for anio in listaAnios">
+     </select>
+	 <select id="seccion" ng-model="seccionElegida" ng-options="seccion.nombre for seccion in listaSecciones">
+     </select>
+
+	 <select id="cargo" ng-model="usuario.seccion">
+        <option ng-repeat="cargo in listaCargos" value="{{cargo}}">{{cargo}}</option>
+      </select>
+
+</div>
+<div>
+	<select id="materia"></select>
+</div>
+<div>
+	<select id="materia"></select>
+</div>
