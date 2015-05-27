@@ -1,24 +1,30 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-  <artifactId>rip-web-test</artifactId>
-  <version>0.0.1</version>
-  <groupId>ar.gov.santafe.meduc</groupId>
-  <packaging>war</packaging>
-  <name>rip-web-test</name>
-    <dependencies>
-			<dependency>
-				<groupId>javax</groupId>
-				<artifactId>javaee-web-api</artifactId>
-				<version>7.0</version>
-				<scope>provided</scope>
-			</dependency>
+	<artifactId>rip-web-test</artifactId>
+	<version>0.0.1</version>
+	<groupId>ar.gov.santafe.meduc</groupId>
+	<packaging>war</packaging>
+	<name>rip-web-test</name>
+	<dependencies>
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-web-api</artifactId>
+			<version>7.0</version>
+			<scope>provided</scope>
+		</dependency>
 		<dependency>
 			<groupId>ar.gov.santafe.meduc</groupId>
 			<artifactId>rip</artifactId>
 			<version>0.0.1</version>
 		</dependency>
-			</dependencies>
+		<dependency>
+			<groupId>ar.com.norrmann.remote</groupId>
+			<artifactId>interfaces</artifactId>
+			<version>0.0.1</version>
+		</dependency>
+	</dependencies>
 	<build>
 		<plugins>
 			<plugin>
@@ -30,6 +36,6 @@
 					<target>1.7</target>
 				</configuration>
 			</plugin>
-</plugins>
-</build>
+		</plugins>
+	</build>
 </project>
