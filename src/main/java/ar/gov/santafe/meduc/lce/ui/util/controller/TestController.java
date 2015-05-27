@@ -14,11 +14,11 @@ public class TestController {
 
 
 	@GET
-	public String testRol(){
+	public String test(){
 		try {
 			CrudService service = new ProductorUtil().getService(CrudService.class);
-			Pais persona = service.findPais(2L);
-			return persona.getPais();
+			Pais pais = service.findPais(2L);
+			return pais.getPais();
 		} catch (Exception e){
 			e.printStackTrace();
 			return "error";
