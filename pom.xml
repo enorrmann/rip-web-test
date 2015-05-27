@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>rest-cli</artifactId>
-  <version>0.0.1-sniper</version>
+  <artifactId>rip-web-test</artifactId>
+  <version>0.0.1</version>
   <groupId>ar.gov.santafe.meduc</groupId>
   <packaging>war</packaging>
-  <name>rest-cli</name>
+  <name>rip-web-test</name>
     <dependencies>
 			<dependency>
 				<groupId>javax</groupId>
@@ -13,14 +13,9 @@
 				<version>7.0</version>
 				<scope>provided</scope>
 			</dependency>
-					<dependency>
+		<dependency>
 			<groupId>ar.gov.santafe.meduc</groupId>
-			<artifactId>EntidadesEducacion</artifactId>
-			<version>1.0.2</version>
-		</dependency>
-					<dependency>
-			<groupId>ar.com.norrmann.remote</groupId>
-			<artifactId>interfaces</artifactId>
+			<artifactId>rip</artifactId>
 			<version>0.0.1</version>
 		</dependency>
 			</dependencies>
