@@ -9,6 +9,7 @@ import javax.ws.rs.Path;
 
 import modelo.organismos.Pais;
 import ar.com.norrmann.remote.interfaces.PaisService;
+import ar.gov.santafe.meduc.rip.Service;
 
 
 

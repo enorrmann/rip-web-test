@@ -1,4 +1,4 @@
-package ar.gov.santafe.meduc.lce.ui.util.controller;
+package ar.gov.santafe.meduc.rip;
 
 public class Service<T> {
 	public final T call;

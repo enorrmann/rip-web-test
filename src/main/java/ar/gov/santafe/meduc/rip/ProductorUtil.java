@@ -1,4 +1,4 @@
-package ar.gov.santafe.meduc.lce.ui.util.controller;
+package ar.gov.santafe.meduc.rip;
 
 import java.lang.reflect.ParameterizedType;
 
