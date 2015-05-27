@@ -18,7 +18,11 @@
 			<artifactId>EntidadesEducacion</artifactId>
 			<version>1.0.2</version>
 		</dependency>
-			
+					<dependency>
+			<groupId>ar.com.norrmann.remote</groupId>
+			<artifactId>interfaces</artifactId>
+			<version>0.0.1</version>
+		</dependency>
 			</dependencies>
 	<build>
 		<plugins>

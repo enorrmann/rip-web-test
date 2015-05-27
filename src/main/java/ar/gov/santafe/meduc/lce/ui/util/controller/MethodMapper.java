@@ -5,8 +5,11 @@ import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.ws.rs.Path;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.PathParam;
+
+import ar.com.norrmann.remote.interfaces.Ruta;
 
 public class MethodMapper {
 
@@ -15,8 +18,15 @@ public class MethodMapper {
 		Map<String, Object> parameterMap = getParameterMap(method, args);
 		String path = getPath(method);
 		Class<?> returnType = method.getReturnType();
+		
+		Metodo metodo = null;
+		if (method.getAnnotation(GET.class)!=null){
+			metodo = Metodo.GET;
+		} else if (method.getAnnotation(POST.class)!=null){
+			metodo = Metodo.POST;
+		}
 
-		CallDescriptor cd = new CallDescriptor(path, parameterMap, Metodo.GET,returnType);
+		CallDescriptor cd = new CallDescriptor(path, parameterMap, metodo,returnType);
 
 		return cd;
 
@@ -27,7 +37,7 @@ public class MethodMapper {
 		Class<?> clazz = method.getDeclaringClass();
 		Annotation rootPath = clazz.getAnnotation(Ruta.class);
 		if (rootPath != null) {
-			path = path + getStringValue(rootPath);
+			path = path + getStringValue(rootPath); 
 		}
 		Annotation pathAnotation = method.getAnnotation(Ruta.class);
 		if (pathAnotation != null) {
