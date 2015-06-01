@@ -8,8 +8,9 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 
 import modelo.organismos.Pais;
+import modelo.personas.Persona;
+import ar.com.norrmann.remote.interfaces.InscripcionesService;
 import ar.com.norrmann.remote.interfaces.PaisService;
-import ar.gov.santafe.meduc.rip.Service;
 
 
 
@@ -19,13 +20,22 @@ public class TestController {
 
 	@Inject
 	Service<PaisService> paisService;
+
+	@Inject
+	Service<InscripcionesService> inscripcionesService;
 	
 	@GET
 	public String test(){
 		try {
+			Pais unPais = paisService.call.findPais(2L);
+			Pais paisGuardado = paisService.call.guardar(unPais);
+		
 			List<Pais> paises = paisService.call.listar();
 			
+			inscripcionesService.call.inscribir(new Persona());
+			
 			return paises.toString();
+			
 		} catch (Exception e){
 			e.printStackTrace();
 			return "error";
