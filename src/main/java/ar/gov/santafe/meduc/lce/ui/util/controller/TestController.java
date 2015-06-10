@@ -27,12 +27,16 @@ public class TestController {
 	@GET
 	public String test(){
 		try {
-			Pais unPais = paisService.call.findPais(2L);
-			Pais paisGuardado = paisService.call.guardar(unPais);
+			//Pais unPais = paisService.call.findPais(2L);
+			Pais nuevoPais = new Pais();
+			nuevoPais.setId(2L);
+			nuevoPais.setAbreviaturaPais("BRAT");
+			nuevoPais.setPais("Bratislava");
+			paisService.call.guardar(nuevoPais);
 		
 			List<Pais> paises = paisService.call.listar();
 			
-			inscripcionesService.call.inscribir(new Persona());
+		//	inscripcionesService.call.inscribir(new Persona());
 			
 			return paises.toString();
 			
